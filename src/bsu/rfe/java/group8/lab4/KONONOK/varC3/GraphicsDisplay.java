@@ -7,7 +7,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.font.FontRenderContext;
-import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
@@ -50,7 +49,6 @@ public class GraphicsDisplay extends JPanel {
     private double scale;
     private double scaleX;
     private double scaleY;
-    private int gran = 0;
     private DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance();
     private BasicStroke graphicsStroke;
     private BasicStroke graphics2Stroke;
@@ -229,7 +227,7 @@ public class GraphicsDisplay extends JPanel {
     }
 
     private void paintHint(Graphics2D canvas) {
-        canvas.setColor(Color.MAGENTA);
+        canvas.setColor(Color.GRAY);
         canvas.setFont(hintFont);
         StringBuilder label = new StringBuilder();
         label.append("X=");
